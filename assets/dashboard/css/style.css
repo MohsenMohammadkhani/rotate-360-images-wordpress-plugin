@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "rota-vazir";
+    src: url("../font/vazir.woff");
+}
+
+#rota-container *:not(.dashicons) {
+    font-family: "rota-vazir";
+}
+
+#rota_images_selected {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#rota_images_selected .item {
+    margin: 5px 5px;
+    border: 1px solid #000;
+    position: relative;
+}
+
+#rota_images_selected .icon-remove {
+    position: absolute;
+    top: 1px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.rota-cursor-pointer {
+    cursor: pointer;
+}
+
+#rota-table-rotate-image td .button-primary {
+    display: inline-flex;
+    align-items: center;
+}
+
+.rota-text-center {
+    text-align: center;
+}
+
+.rota-py-2 {
+    padding: 0.5rem 0px !important;
+}
+
+.rota-p-2 {
+    padding: 0.5rem !important;
+}
+
+.rota-pagination {
+    display: flex;
+}
+
+.rota-spinner-loader-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    z-index: 9999;
+}
+
+.rota-spinner-loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: rota-spin 2s linear infinite; /* Safari */
+    animation: rota-spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes rota-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes rota-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rota-rotate-360-images-id .select2-container {
+    width: 100% !important;
+}
+
+.rota-rotate-360-images-id .select2-container .select2-search__field {
+    min-width: 100%;
+}
