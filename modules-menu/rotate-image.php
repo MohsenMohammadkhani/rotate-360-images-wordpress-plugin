@@ -314,7 +314,7 @@ function rotaGetImage360Rotate($offset, $limit, $whereQuery)
 
     $whereQueryKey = implode("", $whereQuery['key']);
     $parameters =  array_merge($whereQuery['value'], array($limit, $offset));
-    $rotate360Image = $wpdb->get_results($wpdb->prepare("SELECT * FROM $tableName WHERE 1 {$whereQueryKey} LIMIT %d OFFSET %d ", [...$parameters]));
+    $rotate360Image = $wpdb->get_results($wpdb->prepare("SELECT * FROM $tableName WHERE 1 {$whereQueryKey} LIMIT %d OFFSET %d ", ...$parameters));
 
     return $rotate360Image;
 }
